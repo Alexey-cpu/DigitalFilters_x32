@@ -8,7 +8,29 @@ CONFIG -= app_bundle
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-        source/main.cpp
+        files/Butterworth.cpp \
+        files/Chebyshev_I.cpp \
+        files/Chebyshev_II.cpp \
+        files/Elliptic.cpp \
+        files/FIR_filt.cpp \
+        files/Source.cpp \
+        files/aperiodic_filt.cpp \
+        files/aperiodic_filt_eq.cpp \
+        files/cplx_operations.cpp \
+        files/integrators.cpp \
+        files/math_const.cpp \
+        files/mirror_ring_buff_array.cpp \
+        files/mirror_ring_buff_x32.cpp \
+        files/orto_transformations_1ph.cpp \
+        files/orto_transformations_3ph.cpp \
+        files/quad_mltpx.cpp \
+        files/recursive_fourier.cpp \
+        files/signal_gen.cpp \
+        files/simple_IIR.cpp \
+        files/special_functions.cpp \
+        files/timers.cpp \
+        files/triggers.cpp \
+        files/wind_fcn.cpp
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -16,20 +38,28 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
-    include/buffer.h \
-    include/complex.h \
-    include/examples.h \
-    include/fir.h \
-    include/iir.h \
-    include/logical.h \
-    include/quad_mltpx.h \
-    include/recursive_fourier.h \
-    include/recursive_mean.h \
-    include/recursive_rms.h \
-    include/sgen.h \
-    include/special_functions.h \
-    include/transfer_functions.h \
-    include/transformations.h
+    files/Butterworth.hpp \
+    files/Chebyshev_I.hpp \
+    files/Chebyshev_II.hpp \
+    files/Elliptic.hpp \
+    files/FIR_filt.hpp \
+    files/aperiodic_filt.hpp \
+    files/aperiodic_filt_eq.hpp \
+    files/cplx_operations.hpp \
+    files/integrators.hpp \
+    files/math_const.hpp \
+    files/mirror_ring_buff_array.hpp \
+    files/mirror_ring_buff_x32.hpp \
+    files/orto_transformations_1ph.hpp \
+    files/orto_transformations_3ph.hpp \
+    files/quad_mltpx.hpp \
+    files/recursive_fourier.hpp \
+    files/signal_gen.hpp \
+    files/simple_IIR.hpp \
+    files/special_functions.hpp \
+    files/timers.hpp \
+    files/triggers.hpp \
+    files/wind_fcn.hpp
 
 DISTFILES += \
     .gitignore
